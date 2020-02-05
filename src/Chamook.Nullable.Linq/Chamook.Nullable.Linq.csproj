@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netcoreapp3.0</TargetFrameworks>
+    <AssemblyTitle>Nullable Linq</AssemblyTitle>
+    <Version>0.0.1</Version>
+    <Title>Nullable.Linq</Title>
+    <Description>Helpful linq methods for Nullable Reference Types</Description>
+    <Authors>Adam Guest</Authors>
+    <ProjectUrl>https://github.com/chamook/nullable.linq</ProjectUrl>
+    <AssemblyName>Chamook.Nullable.Linq</AssemblyName>
+    <PackageId>Chamook.Nullable.Linq</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
   </PropertyGroup>
