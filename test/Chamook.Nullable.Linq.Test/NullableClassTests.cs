@@ -17,6 +17,16 @@ namespace Chamook.Nullable.Linq.Test
         }
 
         [Fact]
+        public void SelectReturnsNullForNull()
+        {
+            string? input = null;
+
+            var afterIdentity = input.Select(x => x);
+
+            Assert.Null(afterIdentity);
+        }
+
+        [Fact]
         public void SelectSatisfiesCompositionLaw()
         {
             string? input = "hello";
@@ -78,6 +88,36 @@ namespace Chamook.Nullable.Linq.Test
                 select $"{x} {y}";
 
             Assert.Equal("hello world", result);
+        }
+
+        [Fact]
+        public void WhereReturnsValueForTrue()
+        {
+            string? input = "hi";
+
+            var result = input.Where(x => true);
+
+            Assert.Equal(input, result);
+        }
+
+        [Fact]
+        public void WhereReturnsNullForFalse()
+        {
+            string? input = "hi";
+
+            var result = input.Where(x => false);
+
+            Assert.Null(result);
+        }
+
+        [Fact]
+        public void WhereReturnsNullForNullInput()
+        {
+            string? input = null;
+
+            var result = input.Where(x => true);
+
+            Assert.Null(result);
         }
     }
 }

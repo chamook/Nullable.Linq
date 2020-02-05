@@ -53,5 +53,13 @@ namespace Chamook.Nullable.Linq
 
             return selector(nullable, intermediate);
         }
+
+        public static T? Where<T>(this T? nullable, Predicate<T> predicate)
+            where T: class
+        {
+            if(nullable is null) return null;
+
+            return predicate(nullable) ? nullable : null;
+        }
     }
 }
